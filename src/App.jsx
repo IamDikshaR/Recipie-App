@@ -1,9 +1,13 @@
 import { useState } from "react";
+import Search from "./components/Search";
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  return <div className="App"></div>;
+  const [foodData, setFoodData] = useState([]);
+  return (
+    <div className="App">
+      <Search foodData={foodData} setFoodData={setFoodData} />
+    </div>
+  );
 }
 
 export default App;
